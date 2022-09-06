@@ -1,0 +1,12 @@
+
+.site-header .navbar-nav .nav-link {
+  color: #00FFF;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #efefeff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight:  500;
+}

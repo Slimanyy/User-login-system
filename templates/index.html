@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>My Blog</title>
+        <link href="../static/y.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- header start -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div id="header" class="section">
+            <p> Slimany media</p>
+        </div>
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/">Homepage</a>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('logout') }}">Log Out</a>
+              <a class="nav-item nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+            </div>
+          </div>
+         </div>
+         <div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                  {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                      {{ message }}
+                    </div>
+                  {% endfor %}
+                {% endif %}
+            {% endwith %}
+         </div>
+      </nav>
+    </header>
+        <div id="header" class="section">
+            <img alt="IMG_20181215_105818.jpg" class="img-circle" src="/storage/xender/image/IMG_20181215_105818.jpg">
+            <p>Welcome {{ name }} </p>
+        </div>
+        <!-- header end -->
+
+        <!-- About Me section start -->
+        <div class="section">
+            <h1><span>About Me</span></h1>
+            <p>
+                Hey! I'm <strong>Abdulquddus</strong>. I a web programmer.I said to my self at young age that i will learn all the stuffs related to anything computer.I will recommend <strong>Slimany programmers logde</strong> for your tutorials where they build your self-esteem and keep you motivated. Join me in this rewarding journey. You'll have fun, get help, and learn along the way!
+            </p>
+         </div>
+        <!-- About Me section end -->
+
+
+        <!-- My Skills section start -->
+        <div class="section">
+            <h1><span>My Skills</span></h1>
+            <ul>
+                <li>FLASK <br />
+                    <progress min="0" max="100" value="90">90%</progress>
+                </li>
+                <li>HTML <br />
+                    <progress min="0" max="100" value="40">40%</progress>
+                </li>
+                <li>css <br />
+                    <progress min="0" max="100" value="30">30%</progress>
+                </li>
+
+            </ul>
+        </div>
+        <!-- My Skills section end -->
+
+
+        <!-- Form section start -->
+       <div class="section">
+            <h1><span>Contact Me</span></h1>
+            <form>
+                <input name="name" placeholder="Name" type="text" required /><br/>
+                <input name="email" placeholder="Email" type="email" required /><br/>
+                <textarea name="message" placeholder="Message" required ></textarea>
+                <input type="submit" value="SEND" class="submit" />
+            </form>
+        </div>
+        <!-- Form section end -->
+
+        <!-- Contacts section start -->
+        <div class="section" id="contacts">
+            <h1><span>Follow Me</span></h1>
+            <div>
+
+                <a href="https://github.com/Slimanyy">
+                    <img alt="github" src="github.jpg"/>
+                </a>
+                <a href="https://twitter.com/Slimany_">
+                    <img alt="Twitter" src="twitter.jpg" />
+                </a>
+                <a href="https://www.linkedin.com/in/slimany/">
+                <img alt="linkedin" src="link.jpg" /></a>
+            </div>
+        </div>
+        <!-- Contacts section end -->
+
+
+    </body>
+</html>
